@@ -128,10 +128,6 @@ class Categorydetail extends Component{
               <p><h5>SINOPSIS</h5></p>
               <p style={{fontSize:"15px"}}>{this.state.data.sinopsis}</p>
             </Col>
-            <Col lg={3} style={{display:"flex",justifyContent:"space-between"}}>
-              <p>Watch Trailer</p>
-              <p>Playing At</p>
-            </Col>
             </Row>
           </Col>
         </Row>
