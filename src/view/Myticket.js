@@ -23,9 +23,9 @@ class Myticket extends Component{
         }
     }
     componentDidMount(){
-        axios.get('https://xcinemas.herokuapp.com//api/v1/mytickets/'+id)
+        axios.get('https://xcinemas.herokuapp.com/api/v1/mytickets/'+id)
         .then(res=>this.setState({data: res.data.bookings, movies: res.data.bookings}))
-        axios.get('https://xcinemas.herokuapp.com//api/v1/myseats/'+id)
+        axios.get('https://xcinemas.herokuapp.com/api/v1/myseats/'+id)
         .then(res=>this.setState({theatre: res.data.bookings}))
     }
      render() {

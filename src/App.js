@@ -60,7 +60,7 @@ class FormRegister extends Component {
         this.setState({[e.target.name]: e.target.value})
     }
     formSubmit(e) {
-        axios.post('https://xcinemas.herokuapp.com//api/v1/register', {
+        axios.post('https://xcinemas.herokuapp.com/api/v1/register', {
           firstname: this.state.firstname,
           lastname: this.state.lastname,
           dateOfBirth: this.state.dateOfBirth,

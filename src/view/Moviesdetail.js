@@ -46,12 +46,12 @@ class Categorydetail extends Component{
   componentDidMount() {
     if (localStorage.getItem('token') !== null) {
       const token = jwt.verify(tokenraw, 'pssst!')
-      axios.get('https://xcinemas.herokuapp.com//api/v1/user/'+token.userId)
+      axios.get('https://xcinemas.herokuapp.com/api/v1/user/'+token.userId)
      .then(res=>{
        this.setState({user: res.data})
      })
      }
-    axios.get('https://xcinemas.herokuapp.com//api/v1/movies/'+(id))
+    axios.get('https://xcinemas.herokuapp.com/api/v1/movies/'+(id))
     .then(res=>{
       this.setState({data: res.data, datacategory: res.data.category})
       this.setState({price: res.data.price})

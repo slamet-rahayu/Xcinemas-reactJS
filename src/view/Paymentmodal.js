@@ -13,7 +13,7 @@ class MyVerticallyCenteredModal extends Component {
   }
   
   postData = e =>{
-    axios.post('https://xcinemas.herokuapp.com//api/v1/booking', {
+    axios.post('https://xcinemas.herokuapp.com/api/v1/booking', {
       user_id: 3,
       ticket_id: 11
     })

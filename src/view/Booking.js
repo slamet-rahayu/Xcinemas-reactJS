@@ -32,7 +32,7 @@ class Categorydetail extends Component{
     }
   }
   postData = e =>{
-    axios.post('https://xcinemas.herokuapp.com//api/v1/booking', this.state.postdata)
+    axios.post('https://xcinemas.herokuapp.com/api/v1/booking', this.state.postdata)
     .then(res=>{
       if(res.data.message === "success"){
         alert('sukses')
@@ -44,16 +44,16 @@ class Categorydetail extends Component{
   componentDidMount() {
     if (localStorage.getItem('token') !== null) {
       const token = jwt.verify(tokenraw, 'pssst!')
-      axios.get('https://xcinemas.herokuapp.com//api/v1/user/'+token.userId)
+      axios.get('https://xcinemas.herokuapp.com/api/v1/user/'+token.userId)
      .then(res=>{
        this.setState({user: res.data})
      })
      }
-    axios.get('https://xcinemas.herokuapp.com//api/v1/myticket/'+(id))
+    axios.get('https://xcinemas.herokuapp.com/api/v1/myticket/'+(id))
     .then(res=>{
       this.setState({data: res.data, theatre: res.data.theatre, seats: res.data.theatre.seats})
     })
-    axios.get('https://xcinemas.herokuapp.com//api/v1/movies/'+(mvid))
+    axios.get('https://xcinemas.herokuapp.com/api/v1/movies/'+(mvid))
     .then(res=>{
       this.setState({movie: res.data})
     })

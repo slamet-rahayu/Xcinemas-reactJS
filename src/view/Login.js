@@ -67,7 +67,7 @@ class Form extends Component {
     // if (this.state.password.lengh > 1 && this.state.password.length <= 8) {
     //  alert('password must be at least 8 char min') 
     // }
-    // axios.post('https://xcinemas.herokuapp.com//api/v1/login', {
+    // axios.post('https://xcinemas.herokuapp.com/api/v1/login', {
     //   email: this.state.email,
     //   password: this.state.password
     // }).then(res=>{
@@ -84,7 +84,7 @@ class Form extends Component {
     if (this.state.password.length < 1 || this.state.email.length < 1) {
       this.setState({errormsg: 'please enter your email and password!'})
     } else {
-      axios.post('https://xcinemas.herokuapp.com//api/v1/login', {
+      axios.post('https://xcinemas.herokuapp.com/api/v1/login', {
       email: this.state.email,
       password: this.state.password
     }).then(res=>{
